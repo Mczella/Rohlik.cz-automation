@@ -1,0 +1,14 @@
+import requests
+import json
+
+
+def login():
+    response = requests.post(
+        url="https://www.rohlik.cz/services/frontend-service/login",
+        headers={"content-type": "application/json"},
+        data=json.dumps({"email": "xxx", "password": "yyy", }) # fill in your credentials
+    )
+
+    authorization_cookie = response.headers["Set-Cookie"].split(";")[0]
+
+    return authorization_cookie
