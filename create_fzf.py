@@ -26,10 +26,25 @@ def create_recipe():
         amount = fzf.prompt([n / 10 for n in range(0, 21)] + [*range(3, 21)])
         if food_inventory[choice[0]]["unit"] == "ks":
             amount[0] = float(amount[0]) / food_inventory[choice[0]]["amount"]
-        # get_correct_amount(food_inventory, choice, amount)
         ingredient[choice[0]] = float(amount[0])
         recipe["ingredients"] = ingredient
         q5 = input("Do you want to add another ingredient? y/n ")
         if q5 == "n":
             break
     return recipe
+
+
+def create_groceries():
+    fzf = FzfPrompt()
+    groceries = {}
+
+    while True:
+        choice = fzf.prompt(get_food_keys())
+        amount = fzf.prompt(range(0, 20))
+        if food_inventory[choice[0]]["unit"] == "ks":
+            amount[0] = float(amount[0]) / food_inventory[choice[0]]["amount"]
+        groceries[choice[0]] = float(amount[0])
+        q2 = input("Do you want to add another ingredient? y/n ")
+        if q2 == "n":
+            break
+    return groceries

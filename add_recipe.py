@@ -1,4 +1,4 @@
-from create_recipe import create_recipe
+from create_fzf import create_recipe
 import json
 from json.decoder import JSONDecodeError
 import os
