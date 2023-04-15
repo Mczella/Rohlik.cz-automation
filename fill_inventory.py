@@ -13,6 +13,7 @@ def fill_inventory():
             nutritional_values = get_product_nutrition(product_id, authorization_cookie)["nutritionalValues"]
         name = get_product(product_id, authorization_cookie)["name"]
         unit = get_product(product_id, authorization_cookie)["unit"]
+        id_product = get_product(product_id, authorization_cookie)["id"]
         if get_product(product_id, authorization_cookie)["unit"] == "ks":
             textual_amount = int(get_product(product_id, authorization_cookie)["textualAmount"].split()[0])
         else:
@@ -24,7 +25,7 @@ def fill_inventory():
         else:
             price = get_product_price(product_id, authorization_cookie)["price"]["amount"]
 
-        inventory[name] = {"unit": unit, "amount": textual_amount, "price": price, "nutritional values": nutritional_values}
+        inventory[name] = {"product id": id_product, "unit": unit, "amount": textual_amount, "price": price, "nutritional values": nutritional_values}
 
     save_file = open("food_inventory.json", "w")
     json.dump(inventory, save_file, indent=4, ensure_ascii=False)
