@@ -5,9 +5,9 @@ with open("food_inventory.json", "r") as file:
     food_inventory = json.load(file)
 
 
-def check_cart(ingredient_list, cart):
+def check_cart(shopping_list, cart):
     buy_elsewhere = {}
-    for key, value in ingredient_list.items():
+    for key, value in shopping_list.items():
         key_id = get_product_id(food_inventory, key)
         if str(key_id) not in cart["data"]["items"]:
             buy_elsewhere[key] = value
