@@ -16,5 +16,5 @@ def get_food_keys():
 def get_product_id(food_inventory, ingredient):
     for product in food_inventory:
         if ingredient == product:
-            return food_inventory[product]["nutritional values"][0]["productId"]
+            return food_inventory[product]["product id"]
             #returns productId of the ingredient to add the product to cart
