@@ -1,6 +1,5 @@
 from pyfzf.pyfzf import FzfPrompt
 from food_keys import get_food_keys
-from get_correct_amount import get_correct_amount
 import numpy as np
 
 import json
