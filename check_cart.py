@@ -1,4 +1,4 @@
-from get_product_id import get_product_id
+from food_keys import get_product_id
 import json
 
 with open("food_inventory.json", "r") as file:

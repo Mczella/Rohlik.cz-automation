@@ -1,7 +1,7 @@
 from random import randint, sample
 from get import get_favorites, get_product, get_product_price, get_product_nutrition
 from get_amount import get_amount
-from get_product_id import get_product_id
+from food_keys import get_product_id
 from login import login
 from post import post_cart
 from rules import repeating_type, using_up_food, weekday_cooktime, add_specific_recipe
