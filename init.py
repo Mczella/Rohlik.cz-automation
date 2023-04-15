@@ -1,6 +1,5 @@
 from random import randint, sample
 from get import get_favorites, get_product, get_product_price, get_product_nutrition
-from get_amount import get_amount
 from food_keys import get_product_id
 from login import login
 from post import post_cart
@@ -45,7 +44,7 @@ ingredient_list = get_ingredients(weekly_meal_plan)
 
 for ingredient in ingredient_list:
     product_id = get_product_id(food_inventory, ingredient)
-    amount = (get_amount(ingredient, ingredient_list))
+    amount = ingredient_list[ingredient]
     post_cart(authorization_cookie, product_id, amount)
 
 cart = get_cart(authorization_cookie)
