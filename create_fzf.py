@@ -1,7 +1,6 @@
 from pyfzf.pyfzf import FzfPrompt
 from food_keys import get_food_keys
-import numpy as np
-
+from math import ceil
 import json
 
 with open('food_inventory.json', 'r') as data:
@@ -43,7 +42,7 @@ def create_groceries():
         amount = fzf.prompt(range(0, 20))
         if food_inventory[choice[0]]["unit"] == "ks":
             amount[0] = float(amount[0]) / food_inventory[choice[0]]["amount"]
-        groceries[choice[0]] = float(amount[0])
+        groceries[choice[0]] = ceil(amount[0])
         q2 = input("Do you want to add another ingredient? y/n ")
         if q2 == "n":
             break
