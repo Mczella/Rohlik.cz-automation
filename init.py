@@ -19,9 +19,10 @@ with open("regular_groceries.json", 'r') as file:
 
 authorization_cookie = login()
 
+
 def weekly_meal_generator():
     while True:
-        weekly_meal_plan = sample(recipes, 1)
+        weekly_meal_plan = sample(recipes, 7)
         if repeating_type(weekly_meal_plan):
         # add more rules
             break
