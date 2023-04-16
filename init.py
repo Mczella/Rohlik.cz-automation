@@ -36,14 +36,12 @@ for recipe in weekly_meal_plan:
 for ingredient, amount in get_ingredients(weekly_meal_plan).items():
     print(ingredient, amount)
 shopping_list = get_ingredients(weekly_meal_plan)
-print(shopping_list)
+
 for product in groceries: #add groceries to shopping list
     if product in shopping_list:
         shopping_list[product] += groceries[product]
     else:
         shopping_list[product] = groceries[product]
-
-print(shopping_list)
 
 
 for ingredient in shopping_list:
