@@ -13,7 +13,8 @@ def add_recipe(recipe):
         with open('json_recipes.json', 'r') as data:
             try:
                 json_recipes = json.load(data)
-            except JSONDecodeError:
+            except JSONDecodeError as n:
+                print(n)
                 print("Recipes file is not valid.")
                 return
     json_recipes.append(recipe)
