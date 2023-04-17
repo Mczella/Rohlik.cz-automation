@@ -30,6 +30,15 @@ def create_recipe():
         q5 = input("Do you want to add another ingredient? y/n ")
         if q5 == "n":
             break
+
+        for product in ingredient:
+            price = 0
+            price += food_inventory[product]["price"]
+
+        recipe["price"] = ceil(price)
+        recipe["price per portion"] = ceil(price / recipe["portion"])
+
+
     return recipe
 
 
