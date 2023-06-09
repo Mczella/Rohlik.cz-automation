@@ -5,6 +5,7 @@ Generate weekly recipes and fill in your rohlik.cz cart with just 1 click.
 ## Requirements
 
 * [Pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today)
+* fzf
 
 ## Setup
 
