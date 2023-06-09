@@ -1,7 +1,7 @@
 /__pycache__/
 /buy_elsewhere.json
 /food_inventory.json
-/login.py
+/src/login.py
 /json_recipes.json
 /regular_groceries.json
 /meal_plan.json

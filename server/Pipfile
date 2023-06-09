@@ -8,6 +8,10 @@ pyfzf = "*"
 requests = "*"
 pyyaml = "*"
 numpy = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+python-dotenv = "*"
+flask-cors = "*"
 
 [dev-packages]
 
